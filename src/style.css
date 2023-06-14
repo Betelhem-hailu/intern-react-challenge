@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto|Sriracha&display=swap');
+:root{
+--background: #fffffb;
+--accent: #ff6b6c;
+--otherAccent: #ffc145;
+--darkBackground: #5b5f97;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Roboto", arial, sans-serif;
+  color: #222
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0 30px;
+}
+
+.person-card {
+    flex: 1 1 30%;
+    min-width: 300px;
+    background: #fff;
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 0 #ccc;
+    transition: .3s;
+}
+
+.person-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px -5px #ccc;
+}
+
+.person-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 25px 0 10px 0;
+}
+
+.person-other {
+    font-size: 14px;
+    color: #777;
+}
+
+.button {
+    margin: 40px 0 0 0;
+    padding: 10px 30px;
+    color: #999;
+    text-decoration: none;
+    border: 1px solid #999;
+    border-radius: 4px;
+}
+
+.button:hover {
+    color: #fff;
+    background: #748dff;
+    border: 1px solid #748dff;
+}
+
+/* side card css */
+
+.side-container{
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2),
+                -1px -1px 10px 0 rgba(0, 0, 0, 0.2);
+    width: 800px;
+    margin: 2vh;
+  }
+  
+  .header {
+    background-color: #5A80B4;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .title {
+    margin: 0;
+    padding: 1vw;
+    color: #fff;
+    font-size: 1.5em;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-transform: uppercase;
+  }
+
+  .text-wrapper {
+    font-family: sans-serif;
+  }
+  
+  .line {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .author {
+    font-size: 1em;
+    padding: 2vh;
+    font-style: italic;
+  }
+  
+  .text {
+    font-size: 1em;
+    padding: 2vh;
+  }
+  
+  .dots-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .dot {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #b3d4fc;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  
+  .dot:last-child {
+    margin-right: 0;
+  }
+  
+  .dot:nth-child(1) {
+    animation-delay: -0.3s;
+  }
+  
+  .dot:nth-child(2) {
+    animation-delay: -0.1s;
+  }
+  
+  .dot:nth-child(3) {
+    animation-delay: 0.1s;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.8);
+      background-color: #b3d4fc;
+      box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+    }
+  
+    50% {
+      transform: scale(1.2);
+      background-color: #6793fb;
+      box-shadow: 0 0 0 10px rgba(178, 212, 252, 0);
+    }
+  
+    100% {
+      transform: scale(0.8);
+      background-color: #b3d4fc;
+      box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+    }
+  }
+
+@media screen and (max-width: 1000px) {
+    .person-name {
+        font-size: 18px;
+    }
+    .side-container {
+        width: 600px;
+      }
+    
+    .content {
+        display: flex;
+        flex-direction: row;
+      }
+    
+    .title {
+        padding: 1vh;
+      }
+}
+
+@media screen and (max-width: 800px) {
+    .person-card {
+        padding: 20px 15px;
+    }
+
+    .person-name {
+        font-size: 16px;
+    }
+}
